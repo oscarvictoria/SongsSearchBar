@@ -30,7 +30,15 @@ class ViewController: UIViewController {
         someSong = Song.loveSongs
     }
 
-  
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let songDVC = segue.destination as? DetailSongController,
+            let indexPath = tableView.indexPathForSelectedRow else {
+                fatalError("error")
+        }
+        
+        let songs = someSong[indexPath.row]
+        songDVC.songSegue = songs
+    }
 
 }
 
@@ -43,6 +51,7 @@ extension ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "songCell", for: indexPath)
         let song = someSong[indexPath.row]
         cell.textLabel?.text = song.name
+        cell.detailTextLabel?.text = song.artist
         return cell
     }
 }
