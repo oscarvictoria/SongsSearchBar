@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iiH-oI-2Rg">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="songCell" textLabel="K13-gA-ogl" detailTextLabel="KVt-4C-W4M" style="IBUITableViewCellStyleSubtitle" id="Fxz-1n-lLD">
@@ -49,24 +49,32 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="BSa-TN-NYq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="iiH-oI-2Rg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bVG-zx-oa4"/>
-                            <constraint firstItem="iiH-oI-2Rg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gkT-GC-sqi"/>
-                            <constraint firstItem="iiH-oI-2Rg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gyo-da-PIg"/>
-                            <constraint firstAttribute="bottom" secondItem="iiH-oI-2Rg" secondAttribute="bottom" id="lVF-W4-1Ta"/>
+                            <constraint firstItem="BSa-TN-NYq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5e7-Cm-lYq"/>
+                            <constraint firstItem="iiH-oI-2Rg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7qp-it-pgy"/>
+                            <constraint firstItem="iiH-oI-2Rg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CuB-Py-Xrv"/>
+                            <constraint firstAttribute="bottom" secondItem="iiH-oI-2Rg" secondAttribute="bottom" id="LXs-OO-MPS"/>
+                            <constraint firstItem="BSa-TN-NYq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QDG-qo-lth"/>
+                            <constraint firstItem="BSa-TN-NYq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rbz-3r-dbo"/>
+                            <constraint firstItem="iiH-oI-2Rg" firstAttribute="top" secondItem="BSa-TN-NYq" secondAttribute="bottom" id="xQt-b2-Tkt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="cS5-aB-8dY"/>
                     <connections>
+                        <outlet property="searchBar" destination="BSa-TN-NYq" id="Zcn-Vc-PqI"/>
                         <outlet property="tableView" destination="iiH-oI-2Rg" id="dLc-y4-hLh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="728.98550724637687" y="127.90178571428571"/>
+            <point key="canvasLocation" x="638" y="119"/>
         </scene>
         <!--Detail Song Controller-->
         <scene sceneID="cLs-Zb-yD1">
